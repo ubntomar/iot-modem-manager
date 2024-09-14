@@ -89,36 +89,6 @@ class ModemHandler:
                     response = self.wait_for_response(wait_time)
                     
                     if response:
-                        logging.debug(f"Raw command response:\n{response}")
-                        return response
-                    elif attempt < max_attempts - 1:
-                        logging.warning(f"No response received. Retrying... (Attempt {attempt + 1})")
-                    else:
-                        logging.error("No response received after multiple attempts")
-                        return "Error: No response from modem"
-                except Exception as e:
-                    logging.error(f"Error sending command: {e}")
-                    if attempt == max_attempts - 1:
-                        return f"Error: {str(e)}"
-                finally:
-                    self.current_command = None
-            
-            return "Error: Failed to get response after multiple attempts"
-        with self.lock:
-            if not self.ser or not self.ser.is_open:
-                logging.warning("Modem is not connected. Attempting to reconnect...")
-                if not self.connect():
-                    return "Error: Modem not connected"
-            
-            for attempt in range(max_attempts):
-                try:
-                    self.current_command = command
-                    logging.debug(f"Sending command: {command}")
-                    self.ser.write((command + '\r\n').encode())
-                    
-                    response = self.wait_for_response(wait_time)
-                    
-                    if response:
                         logging.debug(f"Command response: {response}")
                         return response
                     elif attempt < max_attempts - 1:
@@ -166,17 +136,6 @@ class ModemHandler:
             return "Error: Failed to get response after multiple attempts"
 
     def wait_for_response(self, timeout):
-        start_time = time.time()
-        response = []
-        while time.time() - start_time < timeout:
-            try:
-                line = self.response_queue.get(timeout=0.1)
-                response.append(line)
-                if line in ['OK', 'ERROR']:
-                    return '\n'.join(response)
-            except queue.Empty:
-                pass
-        return '\n'.join(response) if response else None
         start_time = time.time()
         response = []
         while time.time() - start_time < timeout:
@@ -242,40 +201,10 @@ class ModemHandler:
         if match:
             index = match.group(1)
             content = self.send_command(f'AT+CMGR={index}')
-            logging.info(f"Raw SMS content:\n{content}")
-            parsed_content = self.parse_sms_content(content)
-            logging.info(f"Parsed SMS content:\n{parsed_content}")
-        match = re.search(r'\+CMTI:\s*"[^"]+",\s*(\d+)', notification)
-        if match:
-            index = match.group(1)
-            content = self.send_command(f'AT+CMGR={index}')
             parsed_content = self.parse_sms_content(content)
             logging.info(f"SMS content:\n{parsed_content}")
 
     def parse_sms_content(self, content):
-        lines = content.split('\n')
-        if len(lines) < 2:
-            return "Error: Unexpected SMS format"
-        
-        header = lines[0]
-        message = '\n'.join(lines[1:-1])  # Excluding the last line which is usually just "OK"
-        
-        # Parse header
-        header_match = re.search(r'\+CMGR: (.+)$', header)
-        if header_match:
-            header_content = header_match.group(1)
-            parts = header_content.split(',')
-            if len(parts) >= 3:
-                status = parts[0].strip('"')
-                sender = parts[1].strip('"')
-                timestamp = ','.join(parts[2:]).strip('"')  # Join the rest as timestamp (might contain commas)
-            else:
-                status, sender, timestamp = "Unknown", "Unknown", "Unknown"
-        else:
-            status, sender, timestamp = "Unknown", "Unknown", "Unknown"
-        
-        return f"Status: {status}\nFrom: {sender}\nTimestamp: {timestamp}\nMessage:\n{message}"
-
         lines = content.split('\n')
         if len(lines) < 2:
             return "Error: Unexpected SMS format"
