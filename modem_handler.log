@@ -1,0 +1,45 @@
+2024-09-15 09:18:57,006 - DEBUG - Raw serial data: +CMTI: "ME",19
+2024-09-15 09:18:57,008 - INFO - SMS notification received: +CMTI: "ME",19
+2024-09-15 09:18:57,009 - DEBUG - Event received: +CMTI: "ME",19
+2024-09-15 09:18:57,010 - INFO - New SMS notification received!
+2024-09-15 09:18:57,013 - DEBUG - Sending command: AT+CMGR=19
+2024-09-15 09:18:57,022 - DEBUG - Raw command response:
+AT+CMGR=19
++CMGR: "REC UNREAD","3147654655","","24/09/15,09:18:55+100"
+ram
+OK
+2024-09-15 09:18:57,022 - INFO - Raw SMS content:
+AT+CMGR=19
++CMGR: "REC UNREAD","3147654655","","24/09/15,09:18:55+100"
+ram
+OK
+2024-09-15 09:18:57,025 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3147654655', 'timestamp': '24/09/15,09:18:55+100', 'message': 'ram'}
+2024-09-15 09:18:57,025 - INFO - Processing command: ram
+2024-09-15 09:18:57,027 - DEBUG - Sending command: AT+CMGD=19
+2024-09-15 09:18:57,027 - INFO - Sending SMS to 3147654655: Available RAM: 1967.66 MB
+2024-09-15 09:18:57,249 - DEBUG - Raw command response:
+AT+CMGD=19
+OK
+2024-09-15 09:18:57,249 - INFO - Delete SMS response: AT+CMGD=19
+OK
+2024-09-15 09:18:57,250 - DEBUG - Sending command: AT+CMGF=1
+2024-09-15 09:18:57,311 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-15 09:18:57,312 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-15 09:18:57,367 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-15 09:18:57,368 - DEBUG - Sending command: AT+CMGS="3147654655"
+2024-09-15 09:18:57,369 - DEBUG - Raw command response:
+AT+CMGS="3147654655"
+>
+2024-09-15 09:18:57,370 - DEBUG - Sending command: Available RAM: 1967.66 MB
+2024-09-15 09:18:58,252 - DEBUG - Raw command response:
+Available RAM: 1967.66 MB
++CMGS: 19
+2024-09-15 09:18:58,252 - INFO - SMS sent successfully to 3147654655
+2024-09-15 09:18:58,314 - DEBUG - Raw serial data: OK
+2024-09-15 09:18:58,315 - DEBUG - Event received: OK
+2024-09-15 09:18:58,316 - DEBUG - Modem response: OK
