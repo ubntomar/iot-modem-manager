@@ -31,8 +31,6 @@ console_handler.setLevel(logging.INFO)
 console_handler.setFormatter(formatter)
 logger.addHandler(console_handler)
 
-# Número de teléfono global para respuestas
-RESPONSE_PHONE_NUMBER = "3147654655"
 
 class ModemHandler:
     def __init__(self, port=None, baudrate=115200, timeout=1):
@@ -228,19 +226,24 @@ class ModemHandler:
     def process_sms_command(self, sms_data):
         """Process SMS commands received from the modem."""
         command = sms_data['message'].strip().lower()
-        logger.info(f"Processing command: {command}")
+        sender = sms_data['sender']
+        logger.info(f"Processing command: {command} from sender: {sender}")
+        
         if command == 'cpu':
             cpu_usage = self.get_cpu_usage()
             response = f"CPU Usage: {cpu_usage}%"
         elif command == 'ram':
             ram_info = self.get_ram_info()
             response = f"Available RAM: {ram_info}"
+        elif command == 'signal':
+            signal_strength = self.get_signal_strength()
+            response = f"Signal Strength: {signal_strength}"
         else:
             response = f"Unknown command: {command}"
             logger.info(f"Unknown command received: {command}")
 
-        # Enqueue the response SMS
-        self.outgoing_sms_queue.put((RESPONSE_PHONE_NUMBER, response))
+        # Enqueue the response SMS using the sender's number
+        self.outgoing_sms_queue.put((sender, response))
 
     def get_cpu_usage(self):
         """Get the current CPU usage percentage."""
@@ -324,6 +327,31 @@ class ModemHandler:
         if hasattr(self, 'read_thread'):
             self.read_thread.join()
 
+
+    def interpret_signal_strength(self, csq_response):
+        """Interpreta la respuesta del comando AT+CSQ para obtener la intensidad de la señal."""
+        match = re.search(r'\+CSQ:\s*(\d+),', csq_response)
+        if match:
+            rssi = int(match.group(1))
+            if rssi == 99:
+                return "No signal"
+            elif rssi >= 20:
+                return f"Excellent (-{73 - (rssi - 20) * 2} dBm)"
+            elif rssi >= 15:
+                return f"Good (-{93 - (rssi - 15) * 2} dBm)"
+            elif rssi >= 10:
+                return f"Fair (-{103 - (rssi - 10) * 2} dBm)"
+            else:
+                return f"Poor (-{113 - rssi * 2} dBm)"
+        return "Unable to determine signal strength"
+
+    def get_signal_strength(self):
+        """Obtiene y devuelve la intensidad de la señal interpretada."""
+        response = self.send_command('AT+CSQ')
+        interpretation = self.interpret_signal_strength(response)
+        logger.info(f"Raw signal strength response: {response}")
+        return interpretation
+
 def main():
     parser = argparse.ArgumentParser(description="Modem handler for SMS, calls, and AT commands")
     parser.add_argument("--port", help="Serial port (e.g., /dev/ttyUSB0). If not specified, will auto-detect.")
@@ -335,8 +363,6 @@ def main():
 
     logger.setLevel(args.log_level)
 
-    global RESPONSE_PHONE_NUMBER
-    RESPONSE_PHONE_NUMBER = args.response_number
 
     modem = ModemHandler(port=args.port, baudrate=args.baudrate)
 
@@ -350,8 +376,8 @@ def main():
     outgoing_sms_thread = threading.Thread(target=modem.handle_outgoing_sms)
     outgoing_sms_thread.start()
 
-    logger.info("Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, or 'quit' to exit.")
-    logger.info(f"The modem is now listening for incoming SMS messages. System info responses will be sent to {RESPONSE_PHONE_NUMBER}")
+    logger.info("Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal'  or 'quit' to exit.")
+    logger.info(f"The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number")
 
     try:
         while True:
@@ -370,8 +396,11 @@ def main():
                         break
                     response = modem.send_command(at_command)
                     logger.info(f"Response:\n{response}")
+            elif command.lower() == 'signal':  # Nuevo comando para obtener la intensidad de la señal
+                signal_strength = modem.get_signal_strength()
+                logger.info(f"Current signal strength: {signal_strength}")
             else:
-                logger.warning("Unknown command. Use 'send_sms', 'at', or 'quit'.")
+                logger.warning("Unknown command. Use 'send_sms', 'at', 'signal', or 'quit'.")
     except KeyboardInterrupt:
         logger.info("\nInterruption detected. Closing...")
     finally:
