@@ -43,3 +43,61 @@ Available RAM: 1967.66 MB
 2024-09-15 09:18:58,314 - DEBUG - Raw serial data: OK
 2024-09-15 09:18:58,315 - DEBUG - Event received: OK
 2024-09-15 09:18:58,316 - DEBUG - Modem response: OK
+2024-09-16 07:24:20,463 - DEBUG - Sending command: AT
+2024-09-16 07:24:20,464 - DEBUG - Raw command response:
++C
+AT
+OK
+2024-09-16 07:24:20,464 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 07:24:20,466 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 07:24:20,466 - DEBUG - Sending command: AT
+2024-09-16 07:24:20,468 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 07:24:20,468 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 07:24:20,468 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 07:24:20,520 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 07:24:20,521 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 07:24:20,521 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 07:24:20,574 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 07:24:20,574 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 07:24:20,574 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 07:24:20,576 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 07:24:20,576 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 07:24:20,576 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 07:24:20,687 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 07:24:20,687 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 07:24:20,688 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, or 'quit' to exit.
+2024-09-16 07:24:20,688 - INFO - The modem is now listening for incoming SMS messages. System info responses will be sent to 3147654655
+2024-09-16 07:24:37,229 - DEBUG - Sending command: AT+CSQ
+2024-09-16 07:24:37,232 - DEBUG - Raw command response:
+AT+CSQ
++CSQ: 26,99
+OK
+2024-09-16 07:24:37,233 - INFO - Response:
+AT+CSQ
++CSQ: 26,99
+OK
+2024-09-16 07:32:41,351 - DEBUG - Sending command: quit
+2024-09-16 07:32:43,372 - DEBUG - Raw command response:
+quit
+2024-09-16 07:32:43,372 - INFO - Response:
+quit
+2024-09-16 07:32:48,955 - DEBUG - Sending command: quit
+2024-09-16 07:32:50,959 - DEBUG - Raw command response:
+quit
+2024-09-16 07:32:50,960 - INFO - Response:
+quit

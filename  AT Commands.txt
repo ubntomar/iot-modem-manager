@@ -1,0 +1,82 @@
+# Lista de comandos AT básicos
+
+# Prueba de comunicación básica
+AT
+
+# Obtener información del módem
+ATI
+
+# Verificar la intensidad de la señal
+AT+CSQ
+# Respuesta: +CSQ: <rssi>,<ber>
+# <rssi>: Received Signal Strength Indication
+# 0-9: Mala (-113 dBm a -95 dBm)
+# 10-14: Regular (-93 dBm a -85 dBm)
+# 15-19: Buena (-83 dBm a -75 dBm)
+# 20-31: Excelente (-73 dBm a -51 dBm)
+# 99: No detectable o no conocida
+
+# Verificar el registro en la red
+AT+CREG?
+# Respuesta: +CREG: <n>,<stat>
+# <stat>: 0 - No registrado, 1 - Registrado (home), 2 - Buscando, 5 - Registrado (roaming)
+
+# Obtener el nombre del operador de red
+AT+COPS?
+
+# Configurar el modo de SMS (0 para PDU, 1 para texto)
+AT+CMGF=1
+
+# Leer un SMS (reemplaza <index> con el número del mensaje)
+AT+CMGR=<index>
+
+# Enviar un SMS (se te pedirá ingresar el mensaje después)
+AT+CMGS="<número_de_teléfono>"
+
+# Listar todos los SMS
+AT+CMGL="ALL"
+
+# Eliminar un SMS (reemplaza <index> con el número del mensaje)
+AT+CMGD=<index>
+
+# Configurar las notificaciones de nuevo SMS
+AT+CNMI=2,1,0,0,0
+
+# Verificar el estado de la batería
+AT+CBC
+
+# Obtener el número IMEI del módem
+AT+CGSN
+
+# Verificar la versión del firmware
+AT+CGMR
+
+# Configurar el formato de fecha y hora
+AT+CCLK="YY/MM/DD,HH:MM:SS+ZZ"
+
+# Obtener la fecha y hora actual
+AT+CCLK?
+
+# Habilitar el identificador de llamadas
+AT+CLIP=1
+
+# Realizar una llamada (reemplaza <número> con el número al que quieres llamar)
+ATD<número>;
+
+# Colgar una llamada
+ATH
+
+# Responder una llamada entrante
+ATA
+
+# Verificar el estado de la conexión de datos
+AT+CGATT?
+
+# Configurar el APN (Access Point Name) para la conexión de datos
+AT+CGDCONT=1,"IP","<nombre_del_apn>"
+
+# Iniciar una conexión de datos
+AT+CGACT=1,1
+
+# Terminar una conexión de datos
+AT+CGACT=0,1
