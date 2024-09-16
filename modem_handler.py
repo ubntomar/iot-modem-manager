@@ -8,6 +8,7 @@ import glob
 import queue
 import psutil
 from logging.handlers import RotatingFileHandler
+import subprocess
 
 # Configuración del logging con rotación de archivos
 log_filename = 'modem_handler.log'
@@ -228,7 +229,7 @@ class ModemHandler:
         command = sms_data['message'].strip().lower()
         sender = sms_data['sender']
         logger.info(f"Processing command: {command} from sender: {sender}")
-        
+
         if command == 'cpu':
             cpu_usage = self.get_cpu_usage()
             response = f"CPU Usage: {cpu_usage}%"
@@ -238,12 +239,25 @@ class ModemHandler:
         elif command == 'signal':
             signal_strength = self.get_signal_strength()
             response = f"Signal Strength: {signal_strength}"
+        elif command == 'discover':
+            response = self.execute_mactelnet()
         else:
             response = f"Unknown command: {command}"
             logger.info(f"Unknown command received: {command}")
 
         # Enqueue the response SMS using the sender's number
-        self.outgoing_sms_queue.put((sender, response))
+        self.outgoing_sms_queue.put((sender, self.clean_and_limit_message(response)))
+
+    def clean_and_limit_message(self, message, max_length=160):
+        """Sanitize the message content and limit its length."""
+        # Eliminar caracteres de control y otros caracteres no imprimibles
+        clean_message = re.sub(r'[\x00-\x1F\x7F-\x9F]', '', message)
+        # Eliminar cualquier secuencia de escape ANSI (como [1m)
+        clean_message = re.sub(r'\x1b\[[0-9;]*[a-zA-Z]', '', clean_message)
+        # Limitar la longitud a max_length caracteres
+        if len(clean_message) > max_length:
+            clean_message = clean_message[:max_length-3] + '...'
+        return clean_message.strip()
 
     def get_cpu_usage(self):
         """Get the current CPU usage percentage."""
@@ -352,6 +366,101 @@ class ModemHandler:
         logger.info(f"Raw signal strength response: {response}")
         return interpretation
 
+    def execute_mactelnet(self, duration=10):
+        """Execute mactelnet and return the list of discovered devices."""
+        output = []
+        try:
+            process = subprocess.Popen(
+                ['stdbuf', '-oL', 'mactelnet', '-l'],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.PIPE,
+                text=True,
+                bufsize=1
+            )
+            
+            thread = threading.Thread(target=self.capture_output, args=(process, output))
+            thread.start()
+            
+            time.sleep(duration)
+            
+            process.terminate()
+            thread.join()
+
+            # Procesar y formatear la salida
+            devices = self.process_mactelnet_output(output)
+            return self.format_devices_for_sms(devices)
+        except Exception as e:
+            logger.error(f"Error executing mactelnet: {e}")
+            return f"Error: {str(e)}"
+
+    def process_mactelnet_output(self, output):
+        """Procesa la salida de mactelnet y retorna una lista de dispositivos."""
+        devices = []
+        for line in output:
+            # Eliminar caracteres de control y otros caracteres no imprimibles
+            line = re.sub(r'[\x00-\x1F\x7F-\x9F]', '', line)
+            if line and not line.startswith(("Searching", "IP")):
+                ip = self.extract_ip(line)
+                identity = self.extract_identity(line)
+                if ip and identity:
+                    devices.append((ip, identity))
+        return devices
+    
+    def extract_ip(self, line):
+        """Extrae la dirección IP de la línea."""
+        ip_match = re.search(r'\b(?:\d{1,3}\.){3}\d{1,3}\b', line)
+        return ip_match.group(0) if ip_match else None
+    
+    def extract_identity(self, line):
+        """Extrae y limpia la identidad del dispositivo de la línea de salida de mactelnet."""
+        # Buscar el nombre entre paréntesis
+        match = re.search(r'\((.*?)\)', line)
+        if match:
+            # Tomar el contenido dentro del paréntesis
+            identity = match.group(1).split('(')[0].strip()
+        else:
+            # Si no hay paréntesis, tomar todo después de la dirección MAC
+            parts = line.split()
+            if len(parts) > 2:
+                mac_index = next((i for i, part in enumerate(parts) if ':' in part), -1)
+                if mac_index != -1 and mac_index + 1 < len(parts):
+                    identity = ' '.join(parts[mac_index + 1:])
+                else:
+                    identity = "Unknown"
+            else:
+                identity = "Unknown"
+        return self.clean_identity(identity)    
+
+    def format_devices_for_sms(self, devices, max_length=150):
+        """Formatea la lista de dispositivos para un SMS, respetando el límite de caracteres."""
+        if not devices:
+            return "No devices found"
+        
+        formatted = "Devices found:\n"
+        for ip, identity in devices:
+            device_str = f"{ip}:{identity}\n"
+            if len(formatted) + len(device_str) > max_length:
+                formatted += "..."
+                break
+            formatted += device_str
+        
+        return formatted.strip()
+
+    def capture_output(self, process, output):
+        """Captura la salida del proceso línea por línea."""
+        for line in iter(process.stdout.readline, ''):
+            if line:  # Solo agregar líneas no vacías
+                output.append(line.strip())
+
+    def clean_identity(self, identity):
+        """Elimina caracteres no deseados del identity y lo limita a 15 caracteres."""
+        # Permitir letras, números, espacios y algunos caracteres especiales
+        cleaned = re.sub(r'[^a-zA-Z0-9\s\-_]', '', identity)
+        # Eliminar espacios múltiples
+        cleaned = re.sub(r'\s+', ' ', cleaned)
+        # Limitar a 15 caracteres
+        return cleaned[:15].strip()
+
 def main():
     parser = argparse.ArgumentParser(description="Modem handler for SMS, calls, and AT commands")
     parser.add_argument("--port", help="Serial port (e.g., /dev/ttyUSB0). If not specified, will auto-detect.")
@@ -376,8 +485,8 @@ def main():
     outgoing_sms_thread = threading.Thread(target=modem.handle_outgoing_sms)
     outgoing_sms_thread.start()
 
-    logger.info("Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal'  or 'quit' to exit.")
-    logger.info(f"The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number")
+    logger.info("Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.")
+    logger.info("The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.")
 
     try:
         while True:
@@ -399,8 +508,11 @@ def main():
             elif command.lower() == 'signal':  # Nuevo comando para obtener la intensidad de la señal
                 signal_strength = modem.get_signal_strength()
                 logger.info(f"Current signal strength: {signal_strength}")
+            elif command.lower() == 'discover':
+                devices = modem.execute_mactelnet()
+                logger.info(f"Discovered devices:\n{devices}")
             else:
-                logger.warning("Unknown command. Use 'send_sms', 'at', 'signal', or 'quit'.")
+                logger.warning("Unknown command. Use 'send_sms', 'at', 'signal', 'discover', or 'quit'.")
     except KeyboardInterrupt:
         logger.info("\nInterruption detected. Closing...")
     finally:

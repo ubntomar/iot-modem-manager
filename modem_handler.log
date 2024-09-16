@@ -361,3 +361,988 @@ testing
 2024-09-16 08:18:08,129 - DEBUG - Raw serial data: OK
 2024-09-16 08:18:08,130 - DEBUG - Event received: OK
 2024-09-16 08:18:08,130 - DEBUG - Modem response: OK
+2024-09-16 08:32:49,561 - DEBUG - Sending command: AT
+2024-09-16 08:32:49,563 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:32:49,564 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 08:32:49,564 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 08:32:49,565 - DEBUG - Sending command: AT
+2024-09-16 08:32:49,566 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:32:49,566 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 08:32:49,566 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 08:32:49,623 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 08:32:49,623 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 08:32:49,624 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 08:32:49,680 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 08:32:49,680 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 08:32:49,680 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 08:32:49,681 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:32:49,681 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:32:49,682 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 08:32:49,799 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 08:32:49,799 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 08:32:49,801 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 08:32:49,801 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 08:33:08,315 - INFO - Discovered devices:
+Timeout while executing mactelnet
+2024-09-16 08:34:19,363 - DEBUG - Sending command: AT
+2024-09-16 08:34:19,364 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:34:19,364 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 08:34:19,366 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 08:34:19,367 - DEBUG - Sending command: AT
+2024-09-16 08:34:19,368 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:34:19,368 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 08:34:19,368 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 08:34:19,424 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 08:34:19,425 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 08:34:19,425 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 08:34:19,480 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 08:34:19,480 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 08:34:19,480 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 08:34:19,481 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:34:19,481 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:34:19,481 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 08:34:19,593 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 08:34:19,594 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 08:34:19,594 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 08:34:19,594 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 08:34:22,678 - DEBUG - Raw serial data: +CGEV: NW PDN DEACT 1
+2024-09-16 08:34:22,679 - DEBUG - Event received: +CGEV: NW PDN DEACT 1
+2024-09-16 08:34:22,680 - DEBUG - Unhandled event: +CGEV: NW PDN DEACT 1
+2024-09-16 08:34:23,381 - DEBUG - Raw serial data: +CGEV: NW REATTACH
+2024-09-16 08:34:23,382 - DEBUG - Raw serial data: +CGEV: EPS PDN ACT 1
+2024-09-16 08:34:23,382 - DEBUG - Event received: +CGEV: NW REATTACH
+2024-09-16 08:34:23,382 - DEBUG - Unhandled event: +CGEV: NW REATTACH
+2024-09-16 08:34:23,382 - DEBUG - Event received: +CGEV: EPS PDN ACT 1
+2024-09-16 08:34:23,383 - DEBUG - Unhandled event: +CGEV: EPS PDN ACT 1
+2024-09-16 08:34:29,351 - INFO - Discovered devices:
+Timeout while executing mactelnet
+2024-09-16 08:37:08,117 - DEBUG - Sending command: AT
+2024-09-16 08:37:08,118 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:37:08,118 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 08:37:08,119 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 08:37:08,119 - DEBUG - Sending command: AT
+2024-09-16 08:37:08,120 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:37:08,120 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 08:37:08,120 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 08:37:08,175 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 08:37:08,176 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 08:37:08,176 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 08:37:08,235 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 08:37:08,236 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 08:37:08,236 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 08:37:08,238 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:37:08,238 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:37:08,241 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 08:37:08,351 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 08:37:08,352 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 08:37:08,354 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 08:37:08,354 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 08:37:18,446 - INFO - Discovered devices:
+Timeout while executing mactelnet
+2024-09-16 08:37:41,718 - DEBUG - Sending command: AT
+2024-09-16 08:37:41,720 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:37:41,720 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 08:37:41,722 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 08:37:41,722 - DEBUG - Sending command: AT
+2024-09-16 08:37:41,723 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:37:41,724 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 08:37:41,724 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 08:37:41,781 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 08:37:41,781 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 08:37:41,781 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 08:37:41,832 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 08:37:41,832 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 08:37:41,833 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 08:37:41,834 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:37:41,834 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:37:41,834 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 08:37:41,947 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 08:37:41,947 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 08:37:41,948 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 08:37:41,949 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 08:38:15,531 - INFO - Discovered devices:
+Timeout while executing mactelnet
+2024-09-16 08:38:29,531 - DEBUG - Sending command: AT
+2024-09-16 08:38:29,532 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:38:29,532 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 08:38:29,533 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 08:38:29,534 - DEBUG - Sending command: AT
+2024-09-16 08:38:29,535 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 08:38:29,535 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 08:38:29,535 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 08:38:29,589 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 08:38:29,590 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 08:38:29,590 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 08:38:29,644 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 08:38:29,644 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 08:38:29,645 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 08:38:29,646 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:38:29,646 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 08:38:29,647 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 08:38:29,752 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 08:38:29,753 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 08:38:29,754 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 08:38:29,755 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 08:39:03,445 - INFO - Discovered devices:
+Timeout while executing mactelnet
+2024-09-16 09:00:34,719 - DEBUG - Sending command: AT
+2024-09-16 09:00:34,724 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:00:34,724 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:00:34,725 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:00:34,725 - DEBUG - Sending command: AT
+2024-09-16 09:00:34,726 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:00:34,726 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:00:34,726 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:00:34,784 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:00:34,784 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:00:34,784 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:00:34,837 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:00:34,837 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:00:34,837 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:00:34,838 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:00:34,838 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:00:34,839 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:00:34,957 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:00:34,957 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:00:34,958 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:00:34,959 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:00:49,502 - INFO - Discovered devices:
+[1mIP              MAC-Address       Identity (platform version hardware) uptime[m
+192.168.13.1    78:9a:18:8e:e7:81 Gr3 Casa Omar (MikroTik 7.8 (stable) Feb/24/2023 09:03:00 RB5009UG+S+)  up 17 days 2 hours  TCL9-CTII B-PC-OMAR_ETH2
+2024-09-16 09:01:33,805 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:01:33,807 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:01:33,809 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:01:33,810 - INFO - New SMS notification received!
+2024-09-16 09:01:33,813 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:01:33,819 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:01:32+100"
+discover
+OK
+2024-09-16 09:01:33,820 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:01:32+100"
+discover
+OK
+2024-09-16 09:01:33,821 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3162950915', 'timestamp': '24/09/16,09:01:32+100', 'message': 'discover'}
+2024-09-16 09:01:33,822 - INFO - Processing command: discover from sender: 3162950915
+2024-09-16 09:01:43,837 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:01:43,837 - INFO - Sending SMS to 3162950915: Discovered devices:
+[1mIP              MAC-Address       Identity (platform version hardware) uptime[m
+192.168.13.1    78:9a:18:8e:e7:81 Gr3 Casa Omar (MikroTik 7.8 (stable) Feb/24/2023 09:03:00 RB5009UG+S+)  up 17 days 2 hours  TCL9-CTII B-PC-OMAR_ETH2
+2024-09-16 09:01:43,961 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:01:43,961 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:01:43,962 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:01:44,023 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:01:44,024 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:01:44,082 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:01:44,083 - DEBUG - Sending command: AT+CMGS="3162950915"
+2024-09-16 09:01:44,088 - DEBUG - Raw command response:
+AT+CMGS="3162950915"
+>
+2024-09-16 09:01:44,091 - DEBUG - Sending command: Discovered devices:
+[1mIP              MAC-Address       Identity (platform version hardware) uptime[m
+192.168.13.1    78:9a:18:8e:e7:81 Gr3 Casa Omar (MikroTik 7.8 (stable) Feb/24/2023 09:03:00 RB5009UG+S+)  up 17 days 2 hours  TCL9-CTII B-PC-OMAR_ETH2
+2024-09-16 09:01:44,101 - DEBUG - Raw command response:
+Discovered devices:
+[1mIP              MAC-Address       Identity (platform version hardware) uptime[m
+192.168.13.1    78:9a:18:8e:e7:81 Gr3 Casa Omar (MikroTik 7.8 (stable) Feb/24/2023 09:03:00 RB5009UG+S+)  up 17 days 2 hours  TCL9-CTII B-PC-OMAR_ETH2
+OK
+2024-09-16 09:01:44,102 - ERROR - Error sending SMS. Response: Discovered devices:
+[1mIP              MAC-Address       Identity (platform version hardware) uptime[m
+192.168.13.1    78:9a:18:8e:e7:81 Gr3 Casa Omar (MikroTik 7.8 (stable) Feb/24/2023 09:03:00 RB5009UG+S+)  up 17 days 2 hours  TCL9-CTII B-PC-OMAR_ETH2
+OK
+2024-09-16 09:04:23,689 - DEBUG - Raw serial data: +CGEV: NW PDN DEACT 1
+2024-09-16 09:04:23,690 - DEBUG - Event received: +CGEV: NW PDN DEACT 1
+2024-09-16 09:04:23,690 - DEBUG - Unhandled event: +CGEV: NW PDN DEACT 1
+2024-09-16 09:04:24,391 - DEBUG - Raw serial data: +CGEV: NW REATTACH
+2024-09-16 09:04:24,392 - DEBUG - Raw serial data: +CGEV: EPS PDN ACT 1
+2024-09-16 09:04:24,392 - DEBUG - Event received: +CGEV: NW REATTACH
+2024-09-16 09:04:24,393 - DEBUG - Unhandled event: +CGEV: NW REATTACH
+2024-09-16 09:04:24,393 - DEBUG - Event received: +CGEV: EPS PDN ACT 1
+2024-09-16 09:04:24,393 - DEBUG - Unhandled event: +CGEV: EPS PDN ACT 1
+2024-09-16 09:07:38,093 - DEBUG - Sending command: AT
+2024-09-16 09:07:38,094 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:07:38,094 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:07:38,095 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:07:38,095 - DEBUG - Sending command: AT
+2024-09-16 09:07:38,096 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:07:38,096 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:07:38,096 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:07:38,159 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:07:38,159 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:07:38,160 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:07:38,217 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:07:38,218 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:07:38,218 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:07:38,219 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:07:38,220 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:07:38,220 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:07:38,338 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:07:38,338 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:07:38,339 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:07:38,339 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:07:56,550 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:07:56,550 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:07:56,551 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:07:56,551 - INFO - New SMS notification received!
+2024-09-16 09:07:56,553 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:07:56,561 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:07:55+100"
+discover
+OK
+2024-09-16 09:07:56,562 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:07:55+100"
+discover
+OK
+2024-09-16 09:07:56,565 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3162950915', 'timestamp': '24/09/16,09:07:55+100', 'message': 'discover'}
+2024-09-16 09:07:56,565 - INFO - Processing command: discover from sender: 3162950915
+2024-09-16 09:08:06,579 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:08:06,579 - INFO - Sending SMS to 3162950915: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+2024-09-16 09:08:06,699 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:08:06,700 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:08:06,700 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:08:06,760 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:08:06,761 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:08:06,818 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:08:06,818 - DEBUG - Sending command: AT+CMGS="3162950915"
+2024-09-16 09:08:06,820 - DEBUG - Raw command response:
+AT+CMGS="3162950915"
+>
+2024-09-16 09:08:06,821 - DEBUG - Sending command: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+2024-09-16 09:08:06,824 - DEBUG - Raw command response:
+Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+OK
+2024-09-16 09:08:06,825 - ERROR - Error sending SMS. Response: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+OK
+2024-09-16 09:13:27,720 - DEBUG - Sending command: AT
+2024-09-16 09:13:27,721 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:13:27,721 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:13:27,722 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:13:27,722 - DEBUG - Sending command: AT
+2024-09-16 09:13:27,723 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:13:27,723 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:13:27,723 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:13:27,782 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:13:27,782 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:13:27,783 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:13:27,838 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:13:27,838 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:13:27,838 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:13:27,840 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:13:27,840 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:13:27,841 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:13:27,947 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:13:27,947 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:13:27,949 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:13:27,950 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:13:47,282 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:13:47,283 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:13:47,284 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:13:47,284 - INFO - New SMS notification received!
+2024-09-16 09:13:47,285 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:13:47,292 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3147654655","","24/09/16,09:13:45+100"
+discover
+OK
+2024-09-16 09:13:47,292 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3147654655","","24/09/16,09:13:45+100"
+discover
+OK
+2024-09-16 09:13:47,293 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3147654655', 'timestamp': '24/09/16,09:13:45+100', 'message': 'discover'}
+2024-09-16 09:13:47,293 - INFO - Processing command: discover from sender: 3147654655
+2024-09-16 09:13:57,311 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:13:57,311 - INFO - Sending SMS to 3147654655: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+2024-09-16 09:13:57,430 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:13:57,430 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:13:57,430 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:13:57,489 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:13:57,490 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:13:57,545 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:13:57,546 - DEBUG - Sending command: AT+CMGS="3147654655"
+2024-09-16 09:13:57,548 - DEBUG - Raw command response:
+AT+CMGS="3147654655"
+>
+2024-09-16 09:13:57,548 - DEBUG - Sending command: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+2024-09-16 09:13:57,551 - DEBUG - Raw command response:
+Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+OK
+2024-09-16 09:13:57,552 - ERROR - Error sending SMS. Response: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+OK
+2024-09-16 09:15:03,873 - DEBUG - Sending command: AT
+2024-09-16 09:15:03,874 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:15:03,874 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:15:03,875 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:15:03,875 - DEBUG - Sending command: AT
+2024-09-16 09:15:03,876 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:15:03,876 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:15:03,876 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:15:03,933 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:15:03,933 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:15:03,934 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:15:03,989 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:15:03,989 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:15:03,989 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:15:03,991 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:15:03,991 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:15:03,991 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:15:04,101 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:15:04,101 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:15:04,102 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:15:04,102 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:15:15,608 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:15:15,608 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:15:15,609 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:15:15,609 - INFO - New SMS notification received!
+2024-09-16 09:15:15,610 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:15:15,616 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3147654655","","24/09/16,09:15:13+100"
+discover
+OK
+2024-09-16 09:15:15,616 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3147654655","","24/09/16,09:15:13+100"
+discover
+OK
+2024-09-16 09:15:15,618 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3147654655', 'timestamp': '24/09/16,09:15:13+100', 'message': 'discover'}
+2024-09-16 09:15:15,618 - INFO - Processing command: discover from sender: 3147654655
+2024-09-16 09:15:25,633 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:15:25,634 - INFO - Sending SMS to 3147654655: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+2024-09-16 09:15:25,749 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:15:25,751 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:15:25,752 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:15:25,813 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:15:25,814 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:15:25,869 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:15:25,869 - DEBUG - Sending command: AT+CMGS="3147654655"
+2024-09-16 09:15:25,871 - DEBUG - Raw command response:
+AT+CMGS="3147654655"
+>
+2024-09-16 09:15:25,871 - DEBUG - Sending command: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+2024-09-16 09:15:25,874 - DEBUG - Raw command response:
+Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+OK
+2024-09-16 09:15:25,874 - ERROR - Error sending SMS. Response: Discovered devices:
+[1mIP versionhardware
+192.168.13.1 OmarMikroTik78s
+OK
+2024-09-16 09:21:26,801 - INFO - SMS queued for sending
+2024-09-16 09:21:26,801 - INFO - Sending SMS to 3147654655: holaa
+2024-09-16 09:21:26,802 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:21:26,859 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:21:26,860 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:21:26,913 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:21:26,914 - DEBUG - Sending command: AT+CMGS="3147654655"
+2024-09-16 09:21:26,914 - DEBUG - Raw command response:
+AT+CMGS="3147654655"
+>
+2024-09-16 09:21:26,915 - DEBUG - Sending command: holaa
+2024-09-16 09:21:27,913 - DEBUG - Raw command response:
+holaa
++CMGS: 23
+2024-09-16 09:21:27,914 - INFO - SMS sent successfully to 3147654655
+2024-09-16 09:21:27,983 - DEBUG - Raw serial data: OK
+2024-09-16 09:21:27,983 - DEBUG - Event received: OK
+2024-09-16 09:21:27,984 - DEBUG - Modem response: OK
+2024-09-16 09:30:38,262 - DEBUG - Sending command: AT
+2024-09-16 09:30:38,264 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:30:38,264 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:30:38,265 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:30:38,266 - DEBUG - Sending command: AT
+2024-09-16 09:30:38,266 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:30:38,266 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:30:38,266 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:30:38,329 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:30:38,329 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:30:38,330 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:30:38,385 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:30:38,385 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:30:38,386 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:30:38,387 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:30:38,388 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:30:38,388 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:30:38,504 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:30:38,505 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:30:38,506 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:30:38,506 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:31:06,651 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:31:06,652 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:31:06,652 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:31:06,653 - INFO - New SMS notification received!
+2024-09-16 09:31:06,654 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:31:06,658 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3147654655","","24/09/16,09:31:04+100"
+discover
+OK
+2024-09-16 09:31:06,659 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3147654655","","24/09/16,09:31:04+100"
+discover
+OK
+2024-09-16 09:31:06,660 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3147654655', 'timestamp': '24/09/16,09:31:04+100', 'message': 'discover'}
+2024-09-16 09:31:06,660 - INFO - Processing command: discover from sender: 3147654655
+2024-09-16 09:31:16,676 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:31:16,676 - INFO - Sending SMS to 3147654655: Discovered devices: [1mIP versionhardware 192.168.13.1 OmarMikroTik78s 192.168.13.1 OmarMikroTik78s
+2024-09-16 09:31:16,796 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:31:16,797 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:31:16,797 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:31:16,858 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:31:16,858 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:31:16,914 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:31:16,918 - DEBUG - Sending command: AT+CMGS="3147654655"
+2024-09-16 09:31:16,919 - DEBUG - Raw command response:
+AT+CMGS="3147654655"
+>
+2024-09-16 09:31:16,919 - DEBUG - Sending command: Discovered devices: [1mIP versionhardware 192.168.13.1 OmarMikroTik78s 192.168.13.1 OmarMikroTik78s
+2024-09-16 09:31:17,859 - DEBUG - Raw command response:
+Discovered devices: [1mIP versionhardware 192.168.13.1 OmarMikroTik78s 192.168.13.1 OmarMikroTik78s
++CMGS: 24
+2024-09-16 09:31:17,860 - INFO - SMS sent successfully to 3147654655
+2024-09-16 09:31:17,882 - DEBUG - Raw serial data: OK
+2024-09-16 09:31:17,883 - DEBUG - Event received: OK
+2024-09-16 09:31:17,883 - DEBUG - Modem response: OK
+2024-09-16 09:35:27,354 - DEBUG - Raw serial data: +CGEV: NW PDN DEACT 1
+2024-09-16 09:35:27,382 - DEBUG - Event received: +CGEV: NW PDN DEACT 1
+2024-09-16 09:35:27,383 - DEBUG - Unhandled event: +CGEV: NW PDN DEACT 1
+2024-09-16 09:35:27,984 - DEBUG - Raw serial data: +CGEV: NW REATTACH
+2024-09-16 09:35:27,985 - DEBUG - Raw serial data: +CGEV: EPS PDN ACT 1
+2024-09-16 09:35:27,985 - DEBUG - Event received: +CGEV: NW REATTACH
+2024-09-16 09:35:27,986 - DEBUG - Unhandled event: +CGEV: NW REATTACH
+2024-09-16 09:35:27,986 - DEBUG - Event received: +CGEV: EPS PDN ACT 1
+2024-09-16 09:35:27,987 - DEBUG - Unhandled event: +CGEV: EPS PDN ACT 1
+2024-09-16 09:49:11,453 - DEBUG - Sending command: AT
+2024-09-16 09:49:11,456 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:49:11,456 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:49:11,457 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:49:11,457 - DEBUG - Sending command: AT
+2024-09-16 09:49:11,458 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:49:11,458 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:49:11,458 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:49:11,516 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:49:11,516 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:49:11,517 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:49:11,572 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:49:11,573 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:49:11,573 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:49:11,574 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:49:11,575 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:49:11,575 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:49:11,699 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:49:11,700 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:49:11,701 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:49:11,701 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:49:33,827 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:49:33,828 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:49:33,829 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:49:33,829 - INFO - New SMS notification received!
+2024-09-16 09:49:33,830 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:49:33,836 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:49:32+100"
+discover
+OK
+2024-09-16 09:49:33,836 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:49:32+100"
+discover
+OK
+2024-09-16 09:49:33,838 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3162950915', 'timestamp': '24/09/16,09:49:32+100', 'message': 'discover'}
+2024-09-16 09:49:33,838 - INFO - Processing command: discover from sender: 3162950915
+2024-09-16 09:49:43,853 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:49:43,853 - INFO - Sending SMS to 3162950915: Devices found:  [1mIP:platformversion 192.168.13.1:MikroTik78
+2024-09-16 09:49:43,971 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:49:43,971 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:49:43,971 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:49:44,028 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:49:44,028 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:49:44,082 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:49:44,082 - DEBUG - Sending command: AT+CMGS="3162950915"
+2024-09-16 09:49:44,083 - DEBUG - Raw command response:
+AT+CMGS="3162950915"
+>
+2024-09-16 09:49:44,084 - DEBUG - Sending command: Devices found:  [1mIP:platformversion 192.168.13.1:MikroTik78
+2024-09-16 09:49:45,034 - DEBUG - Raw command response:
+Devices found:  [1mIP:platformversion 192.168.13.1:MikroTik78
++CMGS: 25
+2024-09-16 09:49:45,035 - INFO - SMS sent successfully to 3162950915
+2024-09-16 09:49:45,062 - DEBUG - Raw serial data: OK
+2024-09-16 09:49:45,063 - DEBUG - Event received: OK
+2024-09-16 09:49:45,063 - DEBUG - Modem response: OK
+2024-09-16 09:57:06,408 - DEBUG - Sending command: AT
+2024-09-16 09:57:06,411 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:57:06,412 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 09:57:06,412 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 09:57:06,413 - DEBUG - Sending command: AT
+2024-09-16 09:57:06,414 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 09:57:06,414 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 09:57:06,414 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:57:06,473 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:57:06,473 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 09:57:06,473 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:57:06,527 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:57:06,527 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 09:57:06,527 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 09:57:06,528 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:57:06,529 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 09:57:06,529 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 09:57:06,643 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 09:57:06,644 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 09:57:06,645 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 09:57:06,646 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 09:57:31,193 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 09:57:31,194 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 09:57:31,194 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 09:57:31,194 - INFO - New SMS notification received!
+2024-09-16 09:57:31,195 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 09:57:31,201 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:57:29+100"
+discover
+OK
+2024-09-16 09:57:31,201 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,09:57:29+100"
+discover
+OK
+2024-09-16 09:57:31,202 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3162950915', 'timestamp': '24/09/16,09:57:29+100', 'message': 'discover'}
+2024-09-16 09:57:31,203 - INFO - Processing command: discover from sender: 3162950915
+2024-09-16 09:57:41,224 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 09:57:41,224 - INFO - Sending SMS to 3162950915: Devices found:[1mIP:1mIP MAC-Addres192.168.13.1:192168131 789a1
+2024-09-16 09:57:41,346 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 09:57:41,347 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 09:57:41,347 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 09:57:41,404 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 09:57:41,406 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 09:57:41,462 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 09:57:41,462 - DEBUG - Sending command: AT+CMGS="3162950915"
+2024-09-16 09:57:41,463 - DEBUG - Raw command response:
+AT+CMGS="3162950915"
+>
+2024-09-16 09:57:41,463 - DEBUG - Sending command: Devices found:[1mIP:1mIP MAC-Addres192.168.13.1:192168131 789a1
+2024-09-16 09:57:42,448 - DEBUG - Raw command response:
+Devices found:[1mIP:1mIP MAC-Addres192.168.13.1:192168131 789a1
++CMGS: 26
+2024-09-16 09:57:42,449 - INFO - SMS sent successfully to 3162950915
+2024-09-16 09:57:42,530 - DEBUG - Raw serial data: OK
+2024-09-16 09:57:42,531 - DEBUG - Event received: OK
+2024-09-16 09:57:42,531 - DEBUG - Modem response: OK
+2024-09-16 10:03:40,995 - DEBUG - Sending command: AT
+2024-09-16 10:03:40,998 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 10:03:40,998 - INFO - Found working port: /dev/ttyUSB2
+2024-09-16 10:03:40,999 - INFO - Connected to /dev/ttyUSB2 at 115200 baud
+2024-09-16 10:03:41,000 - DEBUG - Sending command: AT
+2024-09-16 10:03:41,000 - DEBUG - Raw command response:
+AT
+OK
+2024-09-16 10:03:41,000 - INFO - Initialization command AT response: AT
+OK
+2024-09-16 10:03:41,001 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 10:03:41,058 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 10:03:41,058 - INFO - Initialization command AT+CMGF=1 response: AT+CMGF=1
+OK
+2024-09-16 10:03:41,059 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 10:03:41,115 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 10:03:41,115 - INFO - Initialization command AT+CSCS="GSM" response: AT+CSCS="GSM"
+OK
+2024-09-16 10:03:41,116 - DEBUG - Sending command: AT+CNMI=2,1,0,0,0
+2024-09-16 10:03:41,117 - DEBUG - Raw command response:
+AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 10:03:41,118 - INFO - Initialization command AT+CNMI=2,1,0,0,0 response: AT+CNMI=2,1,0,0,0
+OK
+2024-09-16 10:03:41,118 - DEBUG - Sending command: AT+CLIP=1
+2024-09-16 10:03:41,228 - DEBUG - Raw command response:
+AT+CLIP=1
+OK
+2024-09-16 10:03:41,228 - INFO - Initialization command AT+CLIP=1 response: AT+CLIP=1
+OK
+2024-09-16 10:03:41,230 - INFO - Modem handler ready. Type 'send_sms' to send a message, 'at' to enter AT command mode, 'signal' to check signal strength, 'discover' to list devices, or 'quit' to exit.
+2024-09-16 10:03:41,230 - INFO - The modem is now listening for incoming SMS messages. Responses will be sent to the sender's number.
+2024-09-16 10:04:27,240 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 10:04:27,240 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 10:04:27,241 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 10:04:27,241 - INFO - New SMS notification received!
+2024-09-16 10:04:27,242 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 10:04:27,247 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,10:04:25+100"
+discover
+OK
+2024-09-16 10:04:27,248 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,10:04:25+100"
+discover
+OK
+2024-09-16 10:04:27,249 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3162950915', 'timestamp': '24/09/16,10:04:25+100', 'message': 'discover'}
+2024-09-16 10:04:27,249 - INFO - Processing command: discover from sender: 3162950915
+2024-09-16 10:04:37,267 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 10:04:37,267 - INFO - Sending SMS to 3162950915: Devices found:192.168.13.1:MikroTik 78
+2024-09-16 10:04:37,384 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 10:04:37,385 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 10:04:37,386 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 10:04:37,440 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 10:04:37,441 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 10:04:37,498 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 10:04:37,499 - DEBUG - Sending command: AT+CMGS="3162950915"
+2024-09-16 10:04:37,501 - DEBUG - Raw command response:
+AT+CMGS="3162950915"
+>
+2024-09-16 10:04:37,501 - DEBUG - Sending command: Devices found:192.168.13.1:MikroTik 78
+2024-09-16 10:04:38,509 - DEBUG - Raw command response:
+Devices found:192.168.13.1:MikroTik 78
++CMGS: 27
+2024-09-16 10:04:38,510 - INFO - SMS sent successfully to 3162950915
+2024-09-16 10:04:38,576 - DEBUG - Raw serial data: OK
+2024-09-16 10:04:38,577 - DEBUG - Event received: OK
+2024-09-16 10:04:38,577 - DEBUG - Modem response: OK
+2024-09-16 10:06:50,581 - DEBUG - Raw serial data: +CMTI: "ME",20
+2024-09-16 10:06:50,582 - INFO - SMS notification received: +CMTI: "ME",20
+2024-09-16 10:06:50,582 - DEBUG - Event received: +CMTI: "ME",20
+2024-09-16 10:06:50,583 - INFO - New SMS notification received!
+2024-09-16 10:06:50,583 - DEBUG - Sending command: AT+CMGR=20
+2024-09-16 10:06:50,590 - DEBUG - Raw command response:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,10:06:48+100"
+cpu
+OK
+2024-09-16 10:06:50,591 - INFO - Raw SMS content:
+AT+CMGR=20
++CMGR: "REC UNREAD","3162950915","","24/09/16,10:06:48+100"
+cpu
+OK
+2024-09-16 10:06:50,600 - INFO - Parsed SMS content:
+{'status': 'REC UNREAD', 'sender': '3162950915', 'timestamp': '24/09/16,10:06:48+100', 'message': 'cpu'}
+2024-09-16 10:06:50,603 - INFO - Processing command: cpu from sender: 3162950915
+2024-09-16 10:06:51,607 - DEBUG - Sending command: AT+CMGD=20
+2024-09-16 10:06:51,608 - INFO - Sending SMS to 3162950915: CPU Usage: 43.7%
+2024-09-16 10:06:51,731 - DEBUG - Raw command response:
+AT+CMGD=20
+OK
+2024-09-16 10:06:51,732 - INFO - Delete SMS response: AT+CMGD=20
+OK
+2024-09-16 10:06:51,732 - DEBUG - Sending command: AT+CMGF=1
+2024-09-16 10:06:51,790 - DEBUG - Raw command response:
+AT+CMGF=1
+OK
+2024-09-16 10:06:51,791 - DEBUG - Sending command: AT+CSCS="GSM"
+2024-09-16 10:06:51,854 - DEBUG - Raw command response:
+AT+CSCS="GSM"
+OK
+2024-09-16 10:06:51,854 - DEBUG - Sending command: AT+CMGS="3162950915"
+2024-09-16 10:06:51,856 - DEBUG - Raw command response:
+AT+CMGS="3162950915"
+>
+2024-09-16 10:06:51,856 - DEBUG - Sending command: CPU Usage: 43.7%
+2024-09-16 10:06:52,693 - DEBUG - Raw command response:
+CPU Usage: 43.7%
++CMGS: 28
+2024-09-16 10:06:52,693 - INFO - SMS sent successfully to 3162950915
+2024-09-16 10:06:52,788 - DEBUG - Raw serial data: OK
+2024-09-16 10:06:52,789 - DEBUG - Event received: OK
+2024-09-16 10:06:52,789 - DEBUG - Modem response: OK
